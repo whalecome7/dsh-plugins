@@ -1,0 +1,6 @@
+# dsh-plugin-qoder layer: mounts the Qoder panel plugin on top of the web app.
+# Applied after the bundles it sits behind, so this row only adds a plugin and
+# leaves every base / web-app row untouched.
+- insert:
+    - id: qoder-panel
+      name: dsh-plugin-qoder

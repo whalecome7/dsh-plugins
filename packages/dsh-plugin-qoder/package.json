@@ -1,0 +1,34 @@
+{
+  "name": "dsh-plugin-qoder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Qoder panel for dsh: drive the Qoder Agent SDK from a right-sidebar tab, with approval cards, git snapshots and rolling summaries.",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "dependencies": {
+    "@qoder-ai/qoder-agent-sdk": "^1.0.58"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": [
+        "./cordis.patch.yml"
+      ]
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  }
+}

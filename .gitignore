@@ -1,0 +1,25 @@
+# 依赖 —— 由 npm/pnpm 还原，不入库
+node_modules/
+
+# dsh 插件产物与运行时状态
+.dsh/
+
+# qodercli 本地配置与 hooks 验证残留（敏感路径，且属本机环境）
+.qoder/
+
+# WorkBuddy 本地工程数据（含本机路径与工作日志，不入公共仓库）
+.workbuddy/
+
+# 日志与临时输出
+*.log
+*.tmp
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# POC 目录的锁文件跟随根锁文件，避免双份
+!.poc-sdk/package.json
+.poc-sdk/package-lock.json

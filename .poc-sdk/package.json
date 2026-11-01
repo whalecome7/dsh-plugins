@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@qoder-ai/qoder-agent-sdk": "^1.0.58",
+    "zod": "^4.6.7"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "dsh-plugins-workspace",
+  "private": true,
+  "type": "module",
+  "description": "Local dsh plugin workspace. Root dependencies are resolved by plugins under packages/*.",
+  "dependencies": {
+    "@qoder-ai/qoder-agent-sdk": "^1.0.58"
+  }
+}

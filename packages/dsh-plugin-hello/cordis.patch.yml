@@ -1,0 +1,6 @@
+# dsh-plugin-hello layer: one insert row mounting this package's own plugin entry.
+# A bundle's patch is applied after the bundles it sits behind, so this row adds
+# a plugin without touching any base or web-app row.
+- insert:
+    - id: hello-plugin
+      name: dsh-plugin-hello

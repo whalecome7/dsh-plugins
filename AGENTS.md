@@ -44,9 +44,12 @@ dsh --profile <name> --dump-config         # 打印组合后的 profile 配置�
 ```
 package.json                     # 工作区根：@qoder-ai/qoder-agent-sdk 装在这里，供 packages/* 解析
 packages/dsh-plugin-qoder/       # Qoder 面板插件（在用的那个）
+packages/dsh-plugin-qoder-assist/ # Qoder 助手：旁路观察终端 qodercli 会话（镜像/摘要/建议）
 packages/dsh-plugin-hello/       # 最小验证插件，仅作参考，已从 profile 移除
 .poc-sdk/                        # SDK 验证脚本与端到端测试脚本（可删）
 ```
+
+`dsh-plugin-qoder-assist` 的详细设计与接口见 `packages/dsh-plugin-qoder-assist/DESIGN.md`，安装/限制见同目录 `README.md`。
 
 插件依赖解析规则：`packages/dsh-plugin-qoder/lib/*.js` 的 `import` 会向上找到仓库根的 `node_modules`，所以 SDK 必须装在仓库根，不要装进 `~/.dsh/profiles/<name>/node_modules`。
 

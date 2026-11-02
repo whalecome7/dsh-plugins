@@ -1,0 +1,4 @@
+# dsh-plugin-qoder-assist layer: mounts the Qoder Assist panel on the web app.
+- insert:
+    - id: qoder-assist
+      name: dsh-plugin-qoder-assist
